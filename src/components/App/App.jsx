@@ -1,6 +1,7 @@
 import React from 'react';
-import { nanoid } from 'nanoid';
 import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
+
 import AddContactForm from '../AddContactForm/AddContactForm';
 import FindContact from 'components/FindContact/FindContact';
 import ContactList from 'components/ContactList/ContactList';
