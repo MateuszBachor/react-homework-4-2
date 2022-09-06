@@ -8,13 +8,13 @@ import ContactList from 'components/ContactList/ContactList';
 import styles from './App.module.css';
 
 export const App = () => {
-  let [contacts, setContacts] = useState([
+  const [contacts, setContacts] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
     { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
     { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ]);
-  let [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState('');
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -22,7 +22,7 @@ export const App = () => {
     let contactsJson = localStorage.getItem('contactsList');
     let contactsList = JSON.parse(contactsJson);
     if (contactsList !== null) {
-      setContacts((contacts = contactsList));
+      setContacts(() => contactsList);
     }
   }, []);
 
@@ -48,15 +48,15 @@ export const App = () => {
       alert(`${contact.name} is already in contacts`);
       return;
     }
-    setContacts((contacts = [...contacts, contact]));
+    setContacts(() => [...contacts, contact]);
     form.reset();
   };
 
   const removeContact = id => {
-    setContacts((contacts = contacts.filter(contact => contact.id !== id)));
+    setContacts(() => contacts.filter(contact => contact.id !== id));
   };
   const find = event => {
-    setFilter((filter = event.target.value));
+    setFilter(() => event.target.value);
   };
 
   return (
