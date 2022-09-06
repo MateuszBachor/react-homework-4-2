@@ -1,0 +1,9 @@
+.contactsTitle{
+    margin-left: 70px;
+}
+.findDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px 0px 15px 60px;
+}

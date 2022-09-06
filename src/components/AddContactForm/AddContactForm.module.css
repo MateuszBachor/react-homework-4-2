@@ -1,0 +1,55 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   border: solid 2px black;
+   width: 500px;
+   
+   margin: 50px;
+}
+.formInput{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px 0px 15px 10px;
+}
+
+input{
+    width: 200px;
+    border: solid 1px rgb(203, 198, 198);
+}
+input:focus{
+    box-shadow: 1px 1px 10px blue;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+label{
+    font-size: 27px;
+}
+.formBtn{
+    width: 120px;
+    margin: 15px 0px 15px 20px;
+    border-radius: 5px;
+    background-color: rgb(249 249 249);
+    border: 1px solid rgb(203, 198, 198);
+}
+.formBtn:hover{
+box-shadow: 1px 1px 10px blue;
+cursor: pointer;
+}
+.contactsTitle{
+    margin-left: 70px;
+}
+.contactsList{
+    margin-left: 80px;
+}
+.findDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px 0px 15px 60px;
+}
+.findDiv label{
+    font-size: 22px;
+}
